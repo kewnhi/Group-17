@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+<head>
+    <style type="text/css">
+        div{
+            border:1px solid gray;
+            padding:60px 60px;
+            font-size:60px;
+            background-image:url(nen.gif);
+            background-color:#eee;
+        }
+    </style>
+</head>
+<body>
+    <div>Nhóm 17</div>
+</body>
+</html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #myTable {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #myTable td, #myTable th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+    #myTable tr:hover {background-color: #ddd;}
+
+    #myTable th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+  <title></title>
+</head>
+<body onload="count_variable()">
+  <form>
+    <h1>Danh sách thành viên </h1>
+
+    <select id="drop1" onclick="get_selection()">
+      <option>Dương Thị Ngọc Hân</option>
+      <option>Nguyễn Thị Kiều Nhi</option>
+      <option>Nguyễn Thị Quỳnh Như</option>
+      <option>Trương Hồng Ngân</option>
+      <option>Tạ Thúy An</option>
+      
+
+    </select>
+    <p id="p1"></p>
+    <h1 id="c1"></h1>
+    <img id="img1" src="logoDHCT.png" width="150px" height="150px">
+
+    <!-- hiển thị thông tin -->
+    <table id="myTable">
+      <tr>
+        <td>Họ tên</td>
+        <td>Dương Thị Ngọc Hân</td>
+      </tr>
+      <tr>
+        <td>Ngành</td>
+        <td>QLCN</td>
+      </tr>
+      <tr>
+        <td>MSSV</td>
+        <td>B1905757</td>
+      </tr>
+      <tr>
+        <td>Trường</td>
+        <td>Bách Khoa</td>
+      </tr>
+
+    </table>
+  </form>
+  <script type="text/javascript">
+    function count_variable(){count=0}
+    function get_selection(){
+
+      // var count
+      // console.log(count++)
+      document.getElementById("c1").innerHTML=count++;
+      i1 = document.getElementById("p1");
+      l1 = document.getElementById("drop1").options;
+      idx = l1.selectedIndex;
+      // console.log(idx);
+
+      if (idx == 0){
+        document.getElementById("img1").src="ngochan.png"
+        // i1.innerHTML = "Bạn vừa chọn trưởng nhóm: "+ l1[0].innerHTML;
+        var table = document.getElementById("myTable");
+        // hien thị bảng thông tin
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "MSSV";
+        cell2.innerHTML = "B1905757";
+
+        row = table.insertRow(0);            
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "Ngành";
+        cell2.innerHTML = "QLCN";
+
+        row = table.insertRow(0);
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+        cell1.innerHTML = "Họ tên";
+        cell2.innerHTML = "Dương Thị Ngọc Hân";
+
+      }else if (idx == 1){
+        document.getElementById("img1").src="kieunhi.png"
+        var table = document.getElementById("myTable");
+        // hien thị bảng thông tin
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "MSSV";
+        cell2.innerHTML = "B1905804";
+
+        row = table.insertRow(0);            
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "Ngành";
+        cell2.innerHTML = "QLCN";
+
+        row = table.insertRow(0);
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+        cell1.innerHTML = "Họ tên";
+        cell2.innerHTML = "Nguyễn Thị Kiều Nhi (Trưởng nhóm)";
+
+      }else if (idx == 2){
+        document.getElementById("img1").src="quynhnhu.png"
+        var table = document.getElementById("myTable");
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "MSSV";
+        cell2.innerHTML = "B1905808";
+
+        row = table.insertRow(0);            
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "Ngành";
+        cell2.innerHTML = "QLCN";
+
+        row = table.insertRow(0);
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+        cell1.innerHTML = "Họ tên";
+        cell2.innerHTML = "Nguyễn Thị Quỳnh Như";
+
+      }else if (idx == 3){
+        document.getElementById("img1").src="hongngan.png"
+        var table = document.getElementById("myTable");
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "MSSV";
+        cell2.innerHTML = "B2109812";
+
+        row = table.insertRow(0);            
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "Ngành";
+        cell2.innerHTML = "QLCN";
+
+        row = table.insertRow(0);
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+        cell1.innerHTML = "Họ tên";
+        cell2.innerHTML = "Trương Hồng Ngân";
+
+      }else if (idx == 4){
+        document.getElementById("img1").src="thuyan.png"
+        var table = document.getElementById("myTable");
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        document.getElementById("myTable").deleteRow(0);
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "MSSV";
+        cell2.innerHTML = "B2109796";
+
+        row = table.insertRow(0);            
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "Ngành";
+        cell2.innerHTML = "QLCN";
+
+        row = table.insertRow(0);
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+        cell1.innerHTML = "Họ tên";
+        cell2.innerHTML = "Tạ Thúy An";
+      }
+
+    }
+  </script>
+</body>
+</html>
